@@ -1,0 +1,73 @@
+//breadcrumbs
+
+.breadcrumb
+	&-wrapper
+		background: var(--primary-color)
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		@extend %secondary-font
+		font-size: 14px
+		line-height: 1.28
+		@extend %semi-bold
+		@extend %relative
+		color: $white-color
+		margin-bottom: 20px
+		+tablet
+			margin-bottom: 35px
+		+laptop
+			margin-bottom: 50px
+		&:before
+			@extend %content
+			@extend %absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: rgba(0, 0, 0, 0.5)
+		.breadcrumb-tag
+			color: $gray-100
+			&:before
+				display: none
+			&:after
+				background-color: $gray-100
+				margin-top: -3px
+	&-tag
+			@extend .section-header__tag
+			color: $gray-100
+			@extend .section-header__tag--sideLine
+	&-text
+		@extend %relative
+		z-index: 1
+		padding: 60px 0
+		+laptop
+			padding: 100px 0
+		.entry-header
+			.entry-title
+				font-size: 1.78rem //32px*
+				line-height: 1.31
+				color: $white-color
+				+tablet
+					font-size: 2.11rem //38px
+				+laptop
+					font-size: 2.44rem //44px
+	&-nav
+		@extend %absolute
+		right: 0
+		bottom: 0
+		background-color: $white-color
+		padding: 15px
+		z-index: 2
+		+box-shadow(0px 0px 5px 1px $primary-200)
+		+mobile
+			display: none
+		a,.separator
+			color: $black-color
+			padding: 1px
+			&:hover
+				color: var(--primary-color)
+		.current
+			a
+				color: $black-color
+				cursor: default
+				pointer-events: none

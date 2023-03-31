@@ -1,0 +1,78 @@
+.text
+    &-center
+        text-align: center
+    &-left
+        text-align: left
+    &-right
+        text-align: right
+    //font-weight
+    &-bolder
+        font-weight: 800
+    &-bold
+        font-weight: 700
+    &-sbold
+        font-weight: 600
+    &-medium
+        font-weight: 500
+    &-regular
+        font-weight: 400
+    &-light
+        font-weight: 300
+    &-primary
+        color: var(--primary-color)
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    color: $black-color
+    @extend %primary-font
+    @extend %bold
+
+.h1, h1
+    line-height: 1.22 //66px
+    font-size: 2rem //36px
+    +desktop-mini
+        font-size: 2.67rem //48px
+    +laptop
+        font-size: 3rem //54px
+.h2, h2
+    line-height: 1.32 //58px
+    font-size: 1.78rem //32px
+    +desktop-mini
+        font-size: 2.11rem   //38px
+    +laptop
+        font-size: 2.44rem //44px
+.h3, h3
+    line-height: 1.33 //48px
+    font-size: 1.56rem //28px
+    +desktop-mini
+        font-size: 1.78rem //32px
+    +laptop
+        font-size: 2rem //36px
+.h4, h4
+    line-height: 1.35 //38px
+    font-size: 1.33rem //24px
+    +desktop-mini
+        font-size: 1.56rem //28px
+.h5, h5
+    color: $black-color
+    line-height: 1.55
+    font-size: 1.1rem //20px
+    +desktop-mini
+        font-size: 1.22rem //22px
+    .offers &,
+    .news-and-blogs &,
+    .testimonial &
+        text-transform: unset
+
+.h6,h6
+    line-height: 1.4 //26px
+    font-size: 1rem //18px

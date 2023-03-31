@@ -1,0 +1,87 @@
+.NavbarItems
+    position: fixed
+    width: 100%
+    z-index: 1
+    .NavbarLogo
+        font-size: 2rem
+        @extend %bold
+    &__wrapper
+        +flex-aligncenter
+        background: $white-color
+        justify-content: space-between
+        box-shadow: 0 5px 15px 0 rgba(0, 0 , 0, .25)
+        padding: 7px 30px
+        border-radius: 13px
+        margin-top: 24px
+        +tablet-max
+            z-index: 99
+            padding: 10px 20px
+        .menu-icons
+            display: none
+            +tablet-max
+                display: block
+        .menu-icons i
+            cursor: pointer
+        .nav-menu
+            display: grid
+            grid-template-columns: repeat(5, auto)
+            grid-gap: 8px
+            list-style: none
+            align-items: center
+            margin: 0 0 0 auto
+            +tablet-max
+                +flex-center-start
+                flex-direction: column
+                width: 100%
+                height: auto
+                position: absolute
+                top: 0
+                left: -100%
+                opacity: 0
+                align-items: stretch
+                padding: 110px 0 30px 0
+                margin: 0
+                z-index: -1
+                transition: .2s all ease-in-out
+
+            .nav-links
+                color: #222
+                font-size: 1rem
+                font-weight: 600
+                padding: 0.7rem 1rem
+                +tablet-max
+                    display: block
+                    text-align: center
+                    width: 100%
+                    font-size: 1.2rem
+                    padding: 2rem 0
+                    &:hover
+                        background: #01959a
+                        transition: none
+                &:hover
+                    background-color: #01959a
+                    color: $white-color
+                    border-radius: 3px
+                    transition: all 0.2s ease-in-out
+            .nav-links-mobile
+                display: none
+                +tablet-max
+                    display: block
+                    text-align: center
+                    padding: 1.5rem
+                    color: $white-color
+                    margin: auto
+                    border-radius: 4px
+                    width: 80%
+                    text-decoration: none
+                    font-size: 1.2rem
+                    font-weight: 700
+                    background: #01959a
+                    letter-spacing: 2px
+        .active
+            left: 0
+            opacity: 1
+        .navbar__btn
+            border-radius: 3px
+            +tablet-max
+                display: none
